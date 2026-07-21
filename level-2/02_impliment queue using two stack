@@ -1,0 +1,36 @@
+stack1 = []
+stack2 = []
+
+def push(x):
+    while stack1:
+        stack2.append(stack1.pop())
+
+    stack1.append(x)
+
+    while stack2:
+        stack1.append(stack2.pop())
+
+def pop():
+    if not stack1:
+        print("Queue is empty")
+        return -1
+    return stack1.pop()
+
+def peek():
+    if not stack1:
+        print("Queue is empty")
+        return -1
+    return stack1[-1]
+
+def empty():
+    return len(stack1) == 0
+
+push(10)
+push(20)
+push(30)
+
+print("Front:", peek())
+print("Removed:", pop())
+print("Front:", peek())
+print("Is Empty:", empty())
+           
