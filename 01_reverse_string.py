@@ -1,4 +1,3 @@
-
 string = input("Enter a string: ")
 
 reverse = ""
